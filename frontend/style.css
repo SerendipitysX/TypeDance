@@ -1,0 +1,22 @@
+body {
+	padding: .5em;
+}
+#text-form {
+	padding-bottom: .5em;
+}
+
+#svg-element,
+#svg-control {
+	overflow: visible;
+	/* border: 1px solid #ccc; */
+}
+
+#svg-control {
+	position: absolute;
+}
+
+#control-path {
+	fill: none;
+	/* stroke: red; 
+	stroke-width: 1px; */
+}

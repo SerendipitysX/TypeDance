@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <!-- <link rel="icon" type="image/svg+xml" href="/public/favicon.ico" /> -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22>
+      <text y=%22.9em%22 font-size=%2290%22>💫</text></svg>">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TypeDance</title>
+</head>
+
+<body>
+  <div id="app"></div>
+
+
+  <form>
+    <textarea placeholder="sample-points1" rows="2" id="sample-points1" cols="21" class="sample-points1" autocomplete="off"
+      role="textbox" aria-autocomplete="list" aria-haspopup="true"></textarea>
+    <textarea placeholder="sample-points2" rows="2" id="sample-points2" cols="21" class="sample-points2" autocomplete="off"
+      role="textbox" aria-autocomplete="list" aria-haspopup="true"></textarea>
+    <textarea placeholder="sample-points3" rows="2" id="sample-points3" cols="21" class="sample-points3" autocomplete="off"
+      role="textbox" aria-autocomplete="list" aria-haspopup="true"></textarea>
+    <textarea placeholder="sample-points4" rows="2" id="sample-points4" cols="21" class="sample-points4" autocomplete="off"
+      role="textbox" aria-autocomplete="list" aria-haspopup="true"></textarea>
+  </form>
+
+  <!-- <form>
+    <textarea placeholder="svg-point" rows="2" id="svg-point" cols="21" class="svg-point"
+      autocomplete="off" role="textbox" aria-autocomplete="list" aria-haspopup="true"></textarea>
+  </form> -->
+
+  <button id="wrap-button1" onclick="warp1()">WARP</button>
+  <button id="wrap-button2" onclick="warp2()">WARP</button>
+  <button id="wrap-button3" onclick="warp3()">WARP</button>
+  <button id="wrap-button4" onclick="warp4()">WARP</button>
+
+  <svg id="svg-control" width="600" height="600">
+    <path id="control-path" />
+  </svg>
+
+  <embed type="image/svg+xml" src="/src/assets/generation/shape_wrap/svgTry.svg" id="svg-wrapper1" />
+  <embed type="image/svg+xml" src="/src/assets/generation/shape_wrap/svgTry.svg" id="svg-wrapper2" />
+  <embed type="image/svg+xml" src="/src/assets/generation/shape_wrap/svgTry.svg" id="svg-wrapper3" />
+  <embed type="image/svg+xml" src="/src/assets/generation/shape_wrap/svgTry.svg" id="svg-wrapper4" />
+
+
+  <script type="module" src="/src/main.js"></script>
+  <script src="script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/warpjs@1.0.8/dist/warp.js"></script>
+</body>
+
+</html>
