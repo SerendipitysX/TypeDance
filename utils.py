@@ -12,7 +12,12 @@ import svgtrace
 from pathlib import Path
 import convertapi
 import requests
-openai.api_key = "your key"
+import yaml
+with open('my_key.yaml', 'r') as file:
+    data = yaml.safe_load(file)
+
+key = data.get('openai_api_key', None)
+openai.api_key = key
 
 def img_to_svg_api(img_path, output_path):
     # output_path: svg path

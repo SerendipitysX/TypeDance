@@ -1,6 +1,11 @@
 import openai
 import os
-openai.api_key = "your key"
+import yaml
+with open('my_key.yaml', 'r') as file:
+    data = yaml.safe_load(file)
+
+key = data.get('openai_api_key', None)
+openai.api_key = key
 
 def get_answer(user_prompt):
     completion = openai.ChatCompletion.create(
