@@ -1,6 +1,6 @@
 import openai
 import os
-openai.api_key = "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"
+openai.api_key = "your key"
 
 def get_answer(user_prompt):
     completion = openai.ChatCompletion.create(

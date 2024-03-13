@@ -12,7 +12,7 @@ import svgtrace
 from pathlib import Path
 import convertapi
 import requests
-openai.api_key = "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"
+openai.api_key = "your key"
 
 def img_to_svg_api(img_path, output_path):
     # output_path: svg path
@@ -24,7 +24,7 @@ def img_to_svg_api(img_path, output_path):
         },
         headers={
             'Authorization':
-            'Basic dmt2bnp6YWhhM3BoeThxOjF0c2M3NGtvNWwwZmJkM2NzNzM5OTFuMmI5ZnQ0Ymo3Y3ZhaW43dG9lY24yOWhkbzdxNXE='
+            'Basic img_to_svg_api API key'
         },
     )
     if response.status_code == requests.codes.ok:
