@@ -13,14 +13,10 @@ from utils import *
 from transformers import CLIPProcessor, CLIPModel
 from clip_interrogator import Config, Interrogator
 from diffusers import DiffusionPipeline,StableDiffusionDepth2ImgPipeline,StableDiffusionImg2ImgPipeline,StableDiffusionPipeline
-model_id1 = "C:/Users/user/.cache/huggingface/hub/models--dreamlike-art--dreamlike-photoreal-2.0/snapshots/d9e27ac81cfa72def39d74ca673219c349f0a0d5"
-model_id2 = "C:/Users/user/.cache/huggingface/hub/models--runwayml--stable-diffusion-v1-5/snapshots/aa9ba505e1973ae5cd05f5aedd345178f52f8e6a"
-pipe_img2img_art = StableDiffusionImg2ImgPipeline.from_pretrained(model_id2, torch_dtype=torch.float16,local_files_only=True).to("cuda")
-# pipe_img2img_art = StableDiffusionImg2ImgPipeline.from_pretrained(model_id1, torch_dtype=torch.float16,local_files_only=True).to("cuda")
-pipe_text2img = StableDiffusionPipeline.from_pretrained(model_id2, torch_dtype=torch.float16,local_files_only=True).to("cuda")
-module_path = os.path.abspath(os.path.join('colorization'))
-if module_path not in sys.path:
-    sys.path.append(module_path)
+model_id = "C:/Users/user/.cache/huggingface/hub/models--runwayml--stable-diffusion-v1-5/snapshots/aa9ba505e1973ae5cd05f5aedd345178f52f8e6a"
+pipe_img2img_art = StableDiffusionImg2ImgPipeline.from_pretrained(model_id, torch_dtype=torch.float16, local_files_only=True).to("cuda")
+pipe_text2img = StableDiffusionPipeline.from_pretrained(model_id, torch_dtype=torch.float16,local_files_only=True).to("cuda")
+
 current_path = os.getcwd()
 
 def img2img(pipe_img2img, prompt, im_bg, num_images, s=0.9):
